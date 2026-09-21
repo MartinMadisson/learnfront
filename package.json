@@ -1,6 +1,13 @@
 {
   "name": "learnfront",
-  "module": "index.ts",
+  "module": "index.js",
   "type": "module",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^8.3.0"
+  }
 }

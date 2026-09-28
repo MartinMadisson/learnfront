@@ -1,0 +1,9 @@
+@use "sass:color";
+$bgcolor: blueviolet;
+
+body {
+    background-color: $bgcolor;
+}
+div {
+    background-color: color.scale($bgcolor, $lightness: 100%);
+}

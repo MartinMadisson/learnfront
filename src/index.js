@@ -1,4 +1,5 @@
-import lol from "./math.js";
+import { createApp } from 'vue';
+import App from '../app.vue';
+import './style.scss';
 
-let answer = lol.add(1, 2);
-console.log(answer);
+createApp(App).mount('#app');

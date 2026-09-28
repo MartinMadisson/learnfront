@@ -1,9 +1,48 @@
-@use "sass:color";
-$bgcolor: blueviolet;
-
 body {
-    background-color: $bgcolor;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background-color: #add8e6;
+    font-family: Arial, sans-serif;
 }
-div {
-    background-color: color.scale($bgcolor, $lightness: 100%);
+
+.container {
+    width: min(90%, 420px);
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    color: #164e63;
+}
+
+label,
+.result-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #164e63;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid #4b8799;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.result-label {
+    margin-top: 1.5rem;
+}
+
+output {
+    display: block;
+    min-height: 1.5em;
+    color: #164e63;
+    font-size: 1.25rem;
+    font-weight: 700;
 }

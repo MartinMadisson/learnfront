@@ -10,4 +10,5 @@ defineProps(['titles', 'active']);
         </li>
     </ul>
     </div>
+    <routertabs></routertabs>
 </template>

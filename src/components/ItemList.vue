@@ -1,5 +1,8 @@
 <script setup>
 defineProps(['items', 'title']);
+
+
+console.log('items', items);
 </script>
 
 <template>

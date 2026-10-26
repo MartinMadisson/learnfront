@@ -19,7 +19,7 @@ let modal2Open = ref(false);
             url="https://picsum.photos/1280/960?random=1"
             ><div class='box'>I'm a box</div></Modal>
 
-        <button class="button is-success" @click="modal2Open = true">Open Modal 1</button>
+        <button class="button is-success" @click="modal2Open = true">Open Modal 2</button>
         <ImgModal :active="modal2Open" @close="modal2Open = false" url="https://picsum.photos/1280/960"></ImgModal>
     </div>
 </template>

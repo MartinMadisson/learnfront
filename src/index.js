@@ -1,8 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import App from './App.vue';
+import Todo from './pages/Todo.vue';
+import Modals from './pages/Modals.vue';
 
-const app = createApp(App);
-app.mount('#app');
+const routes = [
+    { path: '/', name: 'Todo', component: Todo },
+    { path: '/modals', name: 'Modals', component: Modals },
+];
 
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
 
-const routes=
+createApp(App).use(router).mount('#app');

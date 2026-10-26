@@ -17,8 +17,9 @@ function add() {
     }
 }
 
-let doneItems = computed(() => items.value.filter(item => item.isDone));
-let todoItems = computed(() => items.value.filter(item => !item.isDone));
+let sortedItems = computed(() => [...items.value].sort((a, b) => b.importance - a.importance));
+let doneItems = computed(() => sortedItems.value.filter(item => item.isDone));
+let todoItems = computed(() => sortedItems.value.filter(item => !item.isDone));
 </script>
 
 <template>
@@ -42,7 +43,7 @@ let todoItems = computed(() => items.value.filter(item => !item.isDone));
                 </button>
             </div>
         </div>
-        <ItemList :items="items" title="All Items"></ItemList>
+        <ItemList :items="sortedItems" title="All Items"></ItemList>
         <ItemList :items="doneItems" title="Done Items"></ItemList>
         <ItemList :items="todoItems" title="Todo Items"></ItemList>
     </div>

@@ -1,18 +1,12 @@
 <script setup>
 import { computed, ref } from 'vue';
 import ItemList from '../components/ItemList.vue';
-let i = 0;
-let items = ref([
-    {id:i++, text:'Piim', isDone: true, importance: 3},
-    {id:i++, text:'Viin', isDone: true, importance: 1},
-    {id:i++, text:'Sai', isDone: false, importance: 3},
-    {id:i++, text:'Mac', isDone: false, importance: 2},
-]);
+import { items, nextItemId } from '../items.js';
 let newItem = ref('');
 let newImportance = ref(2);
 function add() {
     if (newItem.value.trim() !== '') {
-        items.value.push({id:i++, text: newItem.value.trim(), isDone: false, importance: newImportance.value});
+        items.value.push({id:nextItemId(), text: newItem.value.trim(), isDone: false, importance: newImportance.value});
         newItem.value = '';
     }
 }

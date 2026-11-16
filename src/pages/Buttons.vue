@@ -12,5 +12,5 @@ import Btn from '../components/Btn.vue';
     <Btn state="loading" @click="console.log('yee')">Cool button</Btn>
     <Btn state="disabled">Cool button</Btn>
     <Btn class="is-primary" href="https://google.com">Cool button</Btn>
-    <Btn class="is-primary" state="disabled" href="https://google.com">Cool button</Btn>
+    <Btn class="is-primary" state="disabled" href="https://google.com">Cool button1</Btn>
 </template>

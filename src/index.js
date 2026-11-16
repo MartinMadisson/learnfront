@@ -1,19 +1,21 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import App from './App.vue';
 import Todo from './pages/Todo.vue';
 import Modals from './pages/Modals.vue';
-import Important from './pages/Important.vue';
-
+import Buttons from './pages/Buttons.vue'
 const routes = [
-    { path: '/', name: 'Todo', component: Todo },
-    { path: '/modals', name: 'Modals', component: Modals },
-    { path: '/important', name: 'Important', component: Important },
+    { path: '/', component: Todo, name: 'Todo' },
+    { path: '/modals', component: Modals, name: 'Modals' },
+    { path: '/buttons', component: Buttons, name: 'Buttons' },
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
-createApp(App).use(router).mount('#app');
+const app = createApp(App);
+
+app.use(router);
+app.mount('#app');
